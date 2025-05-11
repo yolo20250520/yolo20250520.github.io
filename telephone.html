@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>神秘的手机</title>
+<style>
+img{
+    width: auto;
+    height: auto;
+    max-width: 50%;
+    max-height: 50%;  
+}
+</style>
+<script>
+var failure = 0;
+function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    if (x != "01260533") {
+        alert("密码错误");
+        return false;
+    }
+}
+
+function toggleTip(tip) {
+    var x = document.getElementById(tip);
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+</head>
+<body>
+<h1 align="center">神秘的手机</h1>
+<p align="center">保险箱里有一部最新型的诺基亚手机。上面的电量只够你打一次电话求助了，该给谁打电话呢？当然是给你最爱的老公打电话了。但是你此时此刻竟然忘记了你老公的电话，只记住了前三位是130，真是罪不可赦。么的办法，只好给你一些线索找出你老公的电话号码了。你看到了如下线索</p>
+<p align="center">地雷复<br>
+水风井<br>
+地火明夷<br>
+兑为泽
+</p>
+<p align="center">你知道这些词来自《易经》的六十四卦，于是在书房里找到了这些资料：</p>
+<p align="center">八卦是中国古代传统的占卜系统，每一个八卦符号由三爻构成，每爻或为阳爻或为阴爻，列举如下。西方数学家莱布尼茨认为，八卦暗合二进制之理，即以上中下三爻分别代表4、2、1，则八卦可以表示0~7的八种数字。</p>
+
+<div align="center"><img src="xs41.png"/></div>
+<p align="center">上下两个八卦排列组合，构成六十四卦，并以上下八卦命名，列举如下</p>
+<div align="center"><img src="xs4.jpg"/></div>
+<p align="center">有了这些资料，你终于记起了你老公的手机号码</p>
+
+
+
+<form align="center" name="myForm" onsubmit="return validateForm()" action="success.html" method="get">
+130<input type="text" name="fname">
+<input type="submit" value="确定">
+</form>
+<button onclick="toggleTip('tip1')">提示1</button><button onclick="toggleTip('tip2')">提示2</button><button onclick="toggleTip('answer')">答案</button>
+
+
+<hr>
+<div id="tip1" style="display: none"> 提示1：根据线索，坤震坎兑艮离巽乾 分别对应 01234567。</div>
+<div id="tip2" style="display: none"> 提示2：上下两卦分别对应两个数字，共8个数字。</div>
+<div id="answer" style="display: none"> 答案：01260533</div>
+
+</body>
+</html>

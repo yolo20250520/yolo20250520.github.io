@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>神秘的地下室</title>
+<style>
+img{
+    width: auto;
+    height: auto;
+    max-width: 50%;
+    max-height: 50%;  
+}
+</style>
+<script>
+var failure = 0;
+function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    if (x != "556517") {
+        alert("密码错误");
+        return false;
+    }
+}
+
+function toggleTip(tip) {
+    var x = document.getElementById(tip);
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+</head>
+<body>
+<h1 align="center">神秘的地下室</h1>
+<p align="center">“闭上眼许个愿吧！”这是你听到我说的最后一句话。你闭上眼后好像昏厥了一秒钟的时间，可是当你再睁开眼时，却发现自己身处一间阴暗的地下室。头顶上只有一盏烧的发黑的白炽灯发出黄光，照的脚下潮湿的地板微微发亮，似乎能看出小动物刚刚爬过的痕迹，你皱了皱眉头，带着凉气的霉味不停地顺着鼻腔钻进你的身体。</p>
+<p align="center">“这是哪里？”你对自己说。你踮着脚走向眼前的屋门，不出所料，这扇门紧锁着。你转过身来仔细检查这间屋子，在一面墙的墙角发现了一个一米见方的密码门，虽然不知道它通向哪里，你还是决定尝试打开这扇门。你走到密码门前蹲下身子，想要找到一点线索，果然，在密码门上喷有一行不起眼的小字：</p>
+<div align="center"><img src="xs1.png"/></div>
+<p align="center">这是什么意思？你沉思片刻。啊哈！我知道了。你信心满满地输入密码门的密码：</p>
+
+<form align="center" name="myForm" onsubmit="return validateForm()" action="tunnel.html" method="get">
+<input type="text" name="fname">
+<input type="submit" value="确定">
+</form>
+<button onclick="toggleTip('tip1')">提示1</button><button onclick="toggleTip('tip2')">提示2</button><button onclick="toggleTip('tip3')">提示3</button><button onclick="toggleTip('tip4')">提示4</button>
+<button onclick="toggleTip('answer')">答案</button>
+<hr>
+<div id="tip1" style="display: none"> 提示1：密码是6位数字。 </div>
+<div id="tip2" style="display: none"> 提示2：各个数字均为1~7。 </div>
+<div id="tip3" style="display: none"> 提示3：音乐。 </div>
+<div id="tip4" style="display: none"> 提示4：<br/><img src="ts1.png"> </div>
+<div id="answer" style="display: none"> 答案：556517。《祝你生日快乐》的简谱，根据加点的提示得知，答案对应的是第一句。 </div>
+
+</body>
+</html>

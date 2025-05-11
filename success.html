@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>逃离成功</title>
+<style>
+img{
+    width: auto;
+    height: auto;
+    max-width: 50%;
+    max-height: 50%;  
+}
+</style>
+<script>
+var failure = 0;
+function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    if (x != "01260533") {
+        alert("密码错误");
+        return false;
+    }
+}
+
+function toggleTip(tip) {
+    var x = document.getElementById(tip);
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+</head>
+<body>
+<h1 align="center">逃离成功</h1>
+<p align="center">你给你老公打了个电话，他给你救了出去，恭喜你。</p>
+
+</body>
+</html>
